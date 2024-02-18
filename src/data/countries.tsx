@@ -1,998 +1,1003 @@
-export const countries = [
+export type Country = {
+	emoji: string,
+	name: string
+}
+
+export const countries: Country[] = [
 	{
-		Emoji : "🇹🇯",
-		Name : "Tajikistan"
+		emoji: "🇦🇫",
+		name: "Afghanistan"
 	},
 	{
-		Emoji : "🇭🇷",
-		Name : "Croatia"
+		emoji: "🇦🇽",
+		name: "Åland Islands"
 	},
 	{
-		Emoji : "🇰🇪",
-		Name : "Kenya"
+		emoji: "🇦🇱",
+		name: "Albania"
 	},
 	{
-		Emoji : "🇨🇷",
-		Name : "Costa Rica"
+		emoji: "🇩🇿",
+		name: "Algeria"
 	},
 	{
-		Emoji : "🇧🇷",
-		Name : "Brazil"
+		emoji: "🇦🇸",
+		name: "American Samoa"
 	},
 	{
-		Emoji : "🇸🇧",
-		Name : "Solomon Islands"
+		emoji: "🇦🇩",
+		name: "Andorra"
 	},
 	{
-		Emoji : "🇧🇯",
-		Name : "Benin"
+		emoji: "🇦🇴",
+		name: "Angola"
 	},
 	{
-		Emoji : "🇹🇷",
-		Name : "Turkey"
+		emoji: "🇦🇮",
+		name: "Anguilla"
 	},
 	{
-		Emoji : "🇵🇷",
-		Name : "Puerto Rico"
+		emoji: "🇦🇶",
+		name: "Antarctica"
 	},
 	{
-		Emoji : "🇺🇿",
-		Name : "Uzbekistan"
+		emoji: "🇦🇬",
+		name: "Antigua & Barbuda"
 	},
 	{
-		Emoji : "🇲🇷",
-		Name : "Mauritania"
+		emoji: "🇦🇷",
+		name: "Argentina"
 	},
 	{
-		Emoji : "🇲🇲",
-		Name : "Myanmar (Burma)"
+		emoji: "🇦🇲",
+		name: "Armenia"
 	},
 	{
-		Emoji : "🇴🇲",
-		Name : "Oman"
+		emoji: "🇦🇼",
+		name: "Aruba"
 	},
 	{
-		Emoji : "🇵🇲",
-		Name : "St. Pierre & Miquelon"
+		emoji: "🇦🇺",
+		name: "Australia"
 	},
 	{
-		Emoji : "🇭🇺",
-		Name : "Hungary"
+		emoji: "🇦🇹",
+		name: "Austria"
 	},
-	 {
-		Emoji : "🇸🇲",
-		Name : "San Marino"
+	{
+		emoji: "🇦🇿",
+		name: "Azerbaijan"
 	},
 	{
-		Emoji : "🇹🇲",
-		Name : "Turkmenistan"
+		emoji: "🇧🇸",
+		name: "Bahamas"
 	},
 	{
-		Emoji : "🇵🇪",
-		Name : "Peru"
+		emoji: "🇧🇭",
+		name: "Bahrain"
 	},
 	{
-		Emoji : "🇿🇲",
-		Name : "Zambia"
+		emoji: "🇧🇩",
+		name: "Bangladesh"
 	},
 	{
-		Emoji : "🇦🇺",
-		Name : "Australia"
+		emoji: "🇧🇧",
+		name: "Barbados"
 	},
 	{
-		Emoji : "🇬🇪",
-		Name : "Georgia"
+		emoji: "🇧🇾",
+		name: "Belarus"
 	},
 	{
-		Emoji : "🇮🇪",
-		Name : "Ireland"
+		emoji: "🇧🇪",
+		name: "Belgium"
 	},
 	{
-		Emoji : "🇯🇪",
-		Name : "Jersey"
+		emoji: "🇧🇿",
+		name: "Belize"
 	},
 	{
-		Emoji : "🇦🇲",
-		Name : "Armenia"
+		emoji: "🇧🇯",
+		name: "Benin"
 	},
 	{
-		Emoji : "🇧🇲",
-		Name : "Bermuda"
+		emoji: "🇧🇲",
+		name: "Bermuda"
 	},
 	{
-		Emoji : "🇳🇪",
-		Name : "Niger"
+		emoji: "🇧🇹",
+		name: "Bhutan"
 	},
 	{
-		Emoji : "🇭🇲",
-		Name : "Heard & McDonald Islands"
+		emoji: "🇧🇴",
+		name: "Bolivia"
 	},
 	{
-		Emoji : "🇮🇲",
-		Name : "Isle of Man"
+		emoji: "🇧🇦",
+		name: "Bosnia & Herzegovina"
 	},
 	{
-		Emoji : "🇪🇷",
-		Name : "Eritrea"
+		emoji: "🇧🇼",
+		name: "Botswana"
 	},
 	{
-		Emoji : "🇧🇿",
-		Name : "Belize"
+		emoji: "🇧🇻",
+		name: "Bouvet Island"
 	},
 	{
-		Emoji : "🇷🇺",
-		Name : "Russia"
+		emoji: "🇧🇷",
+		name: "Brazil"
 	},
 	{
-		Emoji : "🇳🇱",
-		Name : "Netherlands"
+		emoji: "🇮🇴",
+		name: "British Indian Ocean Territory"
 	},
 	{
-		Emoji : "🇲🇱",
-		Name : "Mali"
+		emoji: "🇻🇬",
+		name: "British Virgin Islands"
 	},
 	{
-		Emoji : "🇲🇺",
-		Name : "Mauritius"
+		emoji: "🇧🇳",
+		name: "Brunei"
 	},
 	{
-		Emoji : "🇹🇱",
-		Name : "Timor-Leste"
+		emoji: "🇧🇬",
+		name: "Bulgaria"
 	},
 	{
-		Emoji : "🇮🇳",
-		Name : "India"
+		emoji: "🇧🇫",
+		name: "Burkina Faso"
 	},
 	{
-		Emoji : "🇺🇦",
-		Name : "Ukraine"
+		emoji: "🇧🇮",
+		name: "Burundi"
 	},
 	{
-		Emoji : "🇹🇩",
-		Name : "Chad"
+		emoji: "🇰🇭",
+		name: "Cambodia"
 	},
 	{
-		Emoji : "🇸🇩",
-		Name : "Sudan"
+		emoji: "🇨🇲",
+		name: "Cameroon"
 	},
 	{
-		Emoji : "🇦🇹",
-		Name : "Austria"
+		emoji: "🇨🇦",
+		name: "Canada"
 	},
 	{
-		Emoji : "🇹🇹",
-		Name : "Trinidad & Tobago"
+		emoji: "🇨🇻",
+		name: "Cape Verde"
 	},
 	{
-		Emoji : "🇸🇹",
-		Name : "SãoTomé & Príncipe"
+		emoji: "🇧🇶",
+		name: "Caribbean Netherlands"
 	},
 	{
-		Emoji : "🇲🇩",
-		Name : "Moldova"
+		emoji: "🇰🇾",
+		name: "Cayman Islands"
 	},
 	{
-		Emoji : "🇦🇱",
-		Name : "Albania"
+		emoji: "🇨🇫",
+		name: "Central African Republic"
 	},
 	{
-		Emoji : "🇨🇲",
-		Name : "Cameroon"
+		emoji: "🇹🇩",
+		name: "Chad"
 	},
 	{
-		Emoji : "🇧🇧",
-		Name : "Barbados"
+		emoji: "🇨🇱",
+		name: "Chile"
 	},
 	{
-		Emoji : "🇧🇩",
-		Name : "Bangladesh"
+		emoji: "🇨🇳",
+		name: "China"
 	},
 	{
-		Emoji : "🇲🇿",
-		Name : "Mozambique"
+		emoji: "🇨🇽",
+		name: "Christmas Island"
 	},
 	{
-		Emoji : "🇦🇩",
-		Name : "Andorra"
+		emoji: "🇨🇨",
+		name: "Cocos(Keeling) Islands"
 	},
 	{
-		Emoji : "🇵🇹",
-		Name : "Portugal"
+		emoji: "🇨🇴",
+		name: "Colombia"
 	},
 	{
-		Emoji : "🇮🇱",
-		Name : "Israel"
+		emoji: "🇰🇲",
+		name: "Comoros"
 	},
 	{
-		Emoji : "🇲🇪",
-		Name : "Montenegro"
+		emoji: "🇨🇬",
+		name: "Congo-Brazzaville"
 	},
 	{
-		Emoji : "🇸🇿",
-		Name : "Swaziland"
+		emoji: "🇨🇩",
+		name: "Congo-Kinshasa"
 	},
 	{
-		Emoji : "🇻🇬",
-		Name : "British Virgin Islands"
+		emoji: "🇨🇰",
+		name: "Cook Islands"
 	},
 	{
-		Emoji : "🇰🇷",
-		Name : "South Korea"
+		emoji: "🇨🇷",
+		name: "Costa Rica"
 	},
 	{
-		Emoji : "🇱🇺",
-		Name : "Luxembourg"
+		emoji: "🇭🇷",
+		name: "Croatia"
 	},
 	{
-		Emoji : "🇲🇴",
-		Name : "Macau"
+		emoji: "🇨🇺",
+		name: "Cuba"
 	},
 	{
-		Emoji : "🇳🇴",
-		Name : "Norway"
+		emoji: "🇨🇼",
+		name: "Curaçao"
 	},
 	{
-		Emoji : "🇸🇴",
-		Name : "Somalia"
+		emoji: "🇨🇾",
+		name: "Cyprus"
 	},
 	{
-		Emoji : "🇩🇲",
-		Name : "Dominica"
+		emoji: "🇨🇿",
+		name: "Czechia"
 	},
 	{
-		Emoji : "🇩🇴",
-		Name : "Dominican Republic"
+		emoji: "🇨🇮",
+		name: "Côte d’Ivoire"
 	},
 	{
-		Emoji : "🇻🇪",
-		Name : "Venezuela"
+		emoji: "🇩🇰",
+		name: "Denmark"
 	},
 	{
-		Emoji : "🇬🇱",
-		Name : "Greenland"
+		emoji: "🇩🇯",
+		name: "Djibouti"
 	},
 	{
-		Emoji : "🇧🇼",
-		Name : "Botswana"
+		emoji: "🇩🇲",
+		name: "Dominica"
 	},
 	{
-		Emoji : "🇬🇬",
-		Name : "Guernsey"
+		emoji: "🇩🇴",
+		name: "Dominican Republic"
 	},
 	{
-		Emoji : "🇲🇬",
-		Name : "Madagascar"
+		emoji: "🇪🇨",
+		name: "Ecuador"
 	},
 	{
-		Emoji : "🇳🇬",
-		Name : "Nigeria"
+		emoji: "🇪🇬",
+		name: "Egypt"
 	},
 	{
-		Emoji : "🇰🇬",
-		Name : "Kyrgyzstan"
+		emoji: "🇸🇻",
+		name: "El Salvador"
 	},
 	{
-		Emoji : "🇫🇴",
-		Name : "Faroe Islands"
+		emoji: "🇬🇶",
+		name: "Equatorial Guinea"
 	},
 	{
-		Emoji : "🇲🇰",
-		Name : "Macedonia"
+		emoji: "🇪🇷",
+		name: "Eritrea"
 	},
 	{
-		Emoji : "🇪🇬",
-		Name : "Egypt"
+		emoji: "🇪🇪",
+		name: "Estonia"
 	},
 	{
-		Emoji : "🇨🇼",
-		Name : "Curaçao"
+		emoji: "🇪🇹",
+		name: "Ethiopia"
 	},
 	{
-		Emoji : "🇨🇻",
-		Name : "Cape Verde"
+		emoji: "🇫🇰",
+		name: "Falkland Islands"
 	},
 	{
-		Emoji : "🇹🇳",
-		Name : "Tunisia"
+		emoji: "🇫🇴",
+		name: "Faroe Islands"
 	},
 	{
-		Emoji : "🇦🇽",
-		Name : "Åland Islands"
+		emoji: "🇫🇯",
+		name: "Fiji"
 	},
 	{
-		Emoji : "🇹🇫",
-		Name : "French Southern Territories"
+		emoji: "🇫🇮",
+		name: "Finland"
 	},
 	{
-		Emoji : "🇬🇷",
-		Name : "Greece"
+		emoji: "🇫🇷",
+		name: "France"
 	},
 	{
-		Emoji : "🇹🇭",
-		Name : "Thailand"
+		emoji: "🇬🇫",
+		name: "French Guiana"
 	},
 	{
-		Emoji : "🇷🇸",
-		Name : "Serbia"
+		emoji: "🇵🇫",
+		name: "French Polynesia"
 	},
 	{
-		Emoji : "🇹🇻",
-		Name : "Tuvalu"
+		emoji: "🇹🇫",
+		name: "French Southern Territories"
 	},
 	{
-		Emoji : "🇸🇻",
-		Name : "El Salvador"
+		emoji: "🇬🇦",
+		name: "Gabon"
 	},
 	{
-		Emoji : "🇧🇴",
-		Name : "Bolivia"
+		emoji: "🇬🇲",
+		name: "Gambia"
 	},
 	{
-		Emoji : "🇨🇳",
-		Name : "China"
+		emoji: "🇬🇪",
+		name: "Georgia"
 	},
 	{
-		Emoji : "🇧🇳",
-		Name : "Brunei"
+		emoji: "🇩🇪",
+		name: "Germany"
 	},
 	{
-		Emoji : "🇺🇬",
-		Name : "Uganda"
+		emoji: "🇬🇭",
+		name: "Ghana"
 	},
 	{
-		Emoji : "🇯🇴",
-		Name : "Jordan"
+		emoji: "🇬🇮",
+		name: "Gibraltar"
 	},
 	{
-		Emoji : "🇬🇺",
-		Name : "Guam"
+		emoji: "🇬🇷",
+		name: "Greece"
 	},
 	{
-		Emoji : "🇱🇧",
-		Name : "Lebanon"
+		emoji: "🇬🇱",
+		name: "Greenland"
 	},
 	{
-		Emoji : "🇦🇼",
-		Name : "Aruba"
+		emoji: "🇬🇩",
+		name: "Grenada"
 	},
 	{
-		Emoji : "🇧🇫",
-		Name : "Burkina Faso"
+		emoji: "🇬🇵",
+		name: "Guadeloupe"
 	},
 	{
-		Emoji : "🇷🇼",
-		Name : "Rwanda"
+		emoji: "🇬🇺",
+		name: "Guam"
 	},
 	{
-		Emoji : "🇰🇼",
-		Name : "Kuwait"
+		emoji: "🇬🇹",
+		name: "Guatemala"
 	},
 	{
-		Emoji : "🇸🇬",
-		Name : "Singapore"
+		emoji: "🇬🇬",
+		name: "Guernsey"
 	},
 	{
-		Emoji : "🇦🇫",
-		Name : "Afghanistan"
+		emoji: "🇬🇳",
+		name: "Guinea"
 	},
 	{
-		Emoji : "🇾🇪",
-		Name : "Yemen"
+		emoji: "🇬🇼",
+		name: "Guinea-Bissau"
 	},
 	{
-		Emoji : "🇨🇬",
-		Name : "Congo-Brazzaville"
+		emoji: "🇬🇾",
+		name: "Guyana"
 	},
 	{
-		Emoji : "🇨🇰",
-		Name : "Cook Islands"
+		emoji: "🇭🇹",
+		name: "Haiti"
 	},
 	{
-		Emoji : "🇮🇶",
-		Name : "Iraq"
+		emoji: "🇭🇲",
+		name: "Heard & McDonald Islands"
 	},
 	{
-		Emoji : "🇫🇯",
-		Name : "Fiji"
+		emoji: "🇭🇳",
+		name: "Honduras"
 	},
 	{
-		Emoji : "🇵🇫",
-		Name : "French Polynesia"
+		emoji: "🇭🇰",
+		name: "Hong Kong"
 	},
 	{
-		Emoji : "🇸🇳",
-		Name : "Senegal"
+		emoji: "🇭🇺",
+		name: "Hungary"
 	},
 	{
-		Emoji : "🇧🇻",
-		Name : "Bouvet Island"
+		emoji: "🇮🇸",
+		name: "Iceland"
 	},
 	{
-		Emoji : "🇩🇪",
-		Name : "Germany"
+		emoji: "🇮🇳",
+		name: "India"
 	},
 	{
-		Emoji : "🇳🇮",
-		Name : "Nicaragua"
+		emoji: "🇮🇩",
+		name: "Indonesia"
 	},
 	{
-		Emoji : "🇶🇦",
-		Name : "Qatar"
+		emoji: "🇮🇷",
+		name: "Iran"
 	},
 	{
-		Emoji : "🇿🇦",
-		Name : "South Africa"
+		emoji: "🇮🇶",
+		name: "Iraq"
 	},
 	{
-		Emoji : "🇨🇾",
-		Name : "Cyprus"
+		emoji: "🇮🇪",
+		name: "Ireland"
 	},
 	{
-		Emoji : "🇲🇫",
-		Name : "St. Martin"
+		emoji: "🇮🇲",
+		name: "Isle of Man"
 	},
 	{
-		Emoji : "🇨🇮",
-		Name : "Côte d’Ivoire"
+		emoji: "🇮🇱",
+		name: "Israel"
 	},
 	{
-		Emoji : "🇳🇦",
-		Name : "Namibia"
+		emoji: "🇮🇹",
+		name: "Italy"
 	},
 	{
-		Emoji : "🇳🇺",
-		Name : "Niue"
+		emoji: "🇯🇲",
+		name: "Jamaica"
 	},
 	{
-		Emoji : "🇮🇴",
-		Name : "British Indian Ocean Territory"
+		emoji: "🇯🇵",
+		name: "Japan"
 	},
 	{
-		Emoji : "🇰🇿",
-		Name : "Kazakhstan"
+		emoji: "🇯🇪",
+		name: "Jersey"
 	},
 	{
-		Emoji : "🇱🇾",
-		Name : "Libya"
+		emoji: "🇯🇴",
+		name: "Jordan"
 	},
 	{
-		Emoji : "🇲🇾",
-		Name : "Malaysia"
+		emoji: "🇰🇿",
+		name: "Kazakhstan"
 	},
 	{
-		Emoji : "🇧🇾",
-		Name : "Belarus"
+		emoji: "🇰🇪",
+		name: "Kenya"
 	},
 	{
-		Emoji : "🇷🇴",
-		Name : "Romania"
+		emoji: "🇰🇮",
+		name: "Kiribati"
 	},
 	{
-		Emoji : "🇻🇨",
-		Name : "St. Vincent & Grenadines"
+		emoji: "🇰🇼",
+		name: "Kuwait"
 	},
 	{
-		Emoji : "🇧🇶",
-		Name : "Caribbean Netherlands"
+		emoji: "🇰🇬",
+		name: "Kyrgyzstan"
 	},
 	{
-		Emoji : "🇩🇯",
-		Name : "Djibouti"
+		emoji: "🇱🇦",
+		name: "Laos"
 	},
 	{
-		Emoji : "🇹🇴",
-		Name : "Tonga"
+		emoji: "🇱🇻",
+		name: "Latvia"
 	},
 	{
-		Emoji : "🇦🇮",
-		Name : "Anguilla"
+		emoji: "🇱🇧",
+		name: "Lebanon"
 	},
 	{
-		Emoji : "🇨🇿",
-		Name : "Czechia"
+		emoji: "🇱🇸",
+		name: "Lesotho"
 	},
 	{
-		Emoji : "🇲🇹",
-		Name : "Malta"
+		emoji: "🇱🇷",
+		name: "Liberia"
 	},
 	{
-		Emoji : "🇬🇦",
-		Name : "Gabon"
+		emoji: "🇱🇾",
+		name: "Libya"
 	},
 	{
-		Emoji : "🇫🇷",
-		Name : "France"
+		emoji: "🇱🇮",
+		name: "Liechtenstein"
 	},
 	{
-		Emoji : "🇹🇿",
-		Name : "Tanzania"
+		emoji: "🇱🇹",
+		name: "Lithuania"
 	},
 	{
-		Emoji : "🇺🇲",
-		Name : "U. S.  Outlying Islands"
+		emoji: "🇱🇺",
+		name: "Luxembourg"
 	},
 	{
-		Emoji : "🇫🇮",
-		Name : "Finland"
+		emoji: "🇲🇴",
+		name: "Macau"
 	},
 	{
-		Emoji : "🇱🇮",
-		Name : "Liechtenstein"
+		emoji: "🇲🇰",
+		name: "Macedonia"
 	},
 	{
-		Emoji : "🇯🇵",
-		Name : "Japan"
+		emoji: "🇲🇬",
+		name: "Madagascar"
 	},
 	{
-		Emoji : "🇵🇼",
-		Name : "Palau"
+		emoji: "🇲🇼",
+		name: "Malawi"
 	},
 	{
-		Emoji : "🇵🇭",
-		Name : "Philippines"
+		emoji: "🇲🇾",
+		name: "Malaysia"
 	},
 	{
-		Emoji : "🇲🇶",
-		Name : "Martinique"
+		emoji: "🇲🇻",
+		name: "Maldives"
 	},
 	{
-		Emoji : "🇬🇼",
-		Name : "Guinea-Bissau"
+		emoji: "🇲🇱",
+		name: "Mali"
 	},
 	{
-		Emoji : "🇹🇬",
-		Name : "Togo"
+		emoji: "🇲🇹",
+		name: "Malta"
 	},
 	{
-		Emoji : "🇳🇫",
-		Name : "Norfolk Island"
+		emoji: "🇲🇭",
+		name: "Marshall Islands"
 	},
 	{
-		Emoji : "🇯🇲",
-		Name : "Jamaica"
+		emoji: "🇲🇶",
+		name: "Martinique"
 	},
 	{
-		Emoji : "🇭🇹",
-		Name : "Haiti"
+		emoji: "🇲🇷",
+		name: "Mauritania"
 	},
 	{
-		Emoji : "🇬🇹",
-		Name : "Guatemala"
+		emoji: "🇲🇺",
+		name: "Mauritius"
 	},
 	{
-		Emoji : "🇱🇻",
-		Name : "Latvia"
+		emoji: "🇾🇹",
+		name: "Mayotte"
 	},
 	{
-		Emoji : "🇿🇼",
-		Name : "Zimbabwe"
+		emoji: "🇲🇽",
+		name: "Mexico"
 	},
 	{
-		Emoji : "🇨🇺",
-		Name : "Cuba"
+		emoji: "🇫🇲",
+		name: "Micronesia"
 	},
 	{
-		Emoji : "🇱🇷",
-		Name : "Liberia"
+		emoji: "🇲🇩",
+		name: "Moldova"
 	},
 	{
-		Emoji : "🇸🇭",
-		Name : "St. Helena"
+		emoji: "🇲🇨",
+		name: "Monaco"
 	},
 	{
-		Emoji : "🇰🇮",
-		Name : "Kiribati"
+		emoji: "🇲🇳",
+		name: "Mongolia"
 	},
 	{
-		Emoji : "🇷🇪",
-		Name : "Réunion"
+		emoji: "🇲🇪",
+		name: "Montenegro"
 	},
 	{
-		Emoji : "🇨🇽",
-		Name : "Christmas Island"
+		emoji: "🇲🇸",
+		name: "Montserrat"
 	},
 	{
-		Emoji : "🇼🇫",
-		Name : "Wallis & Futuna"
+		emoji: "🇲🇦",
+		name: "Morocco"
 	},
 	{
-		Emoji : "🇸🇦",
-		Name : "Saudi Arabia"
+		emoji: "🇲🇿",
+		name: "Mozambique"
 	},
 	{
-		Emoji : "🇭🇳",
-		Name : "Honduras"
+		emoji: "🇲🇲",
+		name: "Myanmar (Burma)"
 	},
 	{
-		Emoji : "🇻🇳",
-		Name : "Vietnam"
+		emoji: "🇳🇦",
+		name: "Namibia"
 	},
 	{
-		Emoji : "🇨🇭",
-		Name : "Switzerland"
+		emoji: "🇳🇷",
+		name: "Nauru"
 	},
 	{
-		Emoji : "🇧🇹",
-		Name : "Bhutan"
+		emoji: "🇳🇵",
+		name: "Nepal"
 	},
 	{
-		Emoji : "🇪🇭",
-		Name : "Western Sahara"
+		emoji: "🇳🇱",
+		name: "Netherlands"
 	},
 	{
-		Emoji : "🇹🇼",
-		Name : "Taiwan"
+		emoji: "🇳🇨",
+		name: "New Caledonia"
 	},
 	{
-		Emoji : "🇬🇩",
-		Name : "Grenada"
+		emoji: "🇳🇿",
+		name: "New Zealand"
 	},
 	{
-		Emoji : "🇰🇭",
-		Name : "Cambodia"
+		emoji: "🇳🇮",
+		name: "Nicaragua"
 	},
 	{
-		Emoji : "🇧🇦",
-		Name : "Bosnia & Herzegovina"
+		emoji: "🇳🇪",
+		name: "Niger"
 	},
 	{
-		Emoji : "🇻🇦",
-		Name : "Vatican City"
+		emoji: "🇳🇬",
+		name: "Nigeria"
 	},
 	{
-		Emoji : "🇲🇦",
-		Name : "Morocco"
+		emoji: "🇳🇺",
+		name: "Niue"
 	},
 	{
-		Emoji : "🇬🇵",
-		Name : "Guadeloupe"
+		emoji: "🇳🇫",
+		name: "Norfolk Island"
 	},
 	{
-		Emoji : "🇧🇱",
-		Name : "St. Barthélemy"
+		emoji: "🇰🇵",
+		name: "North Korea"
 	},
 	{
-		Emoji : "🇬🇾",
-		Name : "Guyana"
+		emoji: "🇲🇵",
+		name: "Northern Mariana Islands"
 	},
 	{
-		Emoji : "🇹🇰",
-		Name : "Tokelau"
+		emoji: "🇳🇴",
+		name: "Norway"
 	},
 	{
-		Emoji : "🇲🇭",
-		Name : "Marshall Islands"
+		emoji: "🇴🇲",
+		name: "Oman"
 	},
 	{
-		Emoji : "🇸🇷",
-		Name : "Suriname"
+		emoji: "🇵🇰",
+		name: "Pakistan"
 	},
 	{
-		Emoji : "🇦🇪",
-		Name : "United Arab Emirates"
+		emoji: "🇵🇼",
+		name: "Palau"
 	},
 	{
-		Emoji : "🇰🇵",
-		Name : "North Korea"
+		emoji: "🇵🇸",
+		name: "Palestinian Territories"
 	},
 	{
-		Emoji : "🇬🇳",
-		Name : "Guinea"
+		emoji: "🇵🇦",
+		name: "Panama"
 	},
 	{
-		Emoji : "🇬🇧",
-		Name : "United Kingdom"
+		emoji: "🇵🇬",
+		name: "Papua New Guinea"
 	},
 	{
-		Emoji : "🇬🇭",
-		Name : "Ghana"
+		emoji: "🇵🇾",
+		name: "Paraguay"
 	},
 	{
-		Emoji : "🇺🇾",
-		Name : "Uruguay"
+		emoji: "🇵🇪",
+		name: "Peru"
 	},
 	{
-		Emoji : "🇸🇱",
-		Name : "Sierra Leone"
+		emoji: "🇵🇭",
+		name: "Philippines"
 	},
 	{
-		Emoji : "🇸🇯",
-		Name : "Svalbard & JanMayen"
+		emoji: "🇵🇳",
+		name: "Pitcairn Islands"
 	},
 	{
-		Emoji : "🇮🇸",
-		Name : "Iceland"
+		emoji: "🇵🇱",
+		name: "Poland"
 	},
 	{
-		Emoji : "🇵🇳",
-		Name : "Pitcairn Islands"
+		emoji: "🇵🇹",
+		name: "Portugal"
 	},
 	{
-		Emoji : "🇾🇹",
-		Name : "Mayotte"
+		emoji: "🇵🇷",
+		name: "Puerto Rico"
 	},
 	{
-		Emoji : "🇫🇲",
-		Name : "Micronesia"
+		emoji: "🇶🇦",
+		name: "Qatar"
 	},
 	{
-		Emoji : "🇦🇿",
-		Name : "Azerbaijan"
+		emoji: "🇷🇴",
+		name: "Romania"
 	},
 	{
-		Emoji : "🇬🇮",
-		Name : "Gibraltar"
+		emoji: "🇷🇺",
+		name: "Russia"
 	},
 	{
-		Emoji : "🇨🇫",
-		Name : "Central African Republic"
+		emoji: "🇷🇼",
+		name: "Rwanda"
 	},
 	{
-		Emoji : "🇵🇰",
-		Name : "Pakistan"
+		emoji: "🇷🇪",
+		name: "Réunion"
 	},
 	{
-		Emoji : "🇸🇪",
-		Name : "Sweden"
+		emoji: "🇼🇸",
+		name: "Samoa"
 	},
 	{
-		Emoji : "🇨🇱",
-		Name : "Chile"
+		emoji: "🇸🇲",
+		name: "San Marino"
 	},
 	{
-		Emoji : "🇫🇰",
-		Name : "Falkland Islands"
+		emoji: "🇸🇦",
+		name: "Saudi Arabia"
 	},
 	{
-		Emoji : "🇲🇼",
-		Name : "Malawi"
+		emoji: "🇸🇳",
+		name: "Senegal"
 	},
 	{
-		Emoji : "🇬🇲",
-		Name : "Gambia"
+		emoji: "🇷🇸",
+		name: "Serbia"
 	},
 	{
-		Emoji : "🇸🇰",
-		Name : "Slovakia"
+		emoji: "🇸🇨",
+		name: "Seychelles"
 	},
 	{
-		Emoji : "🇬🇸",
-		Name : "South Georgia & South Sandwich Islands"
+		emoji: "🇸🇱",
+		name: "Sierra Leone"
 	},
 	{
-		Emoji : "🇲🇻",
-		Name : "Maldives"
+		emoji: "🇸🇬",
+		name: "Singapore"
 	},
 	{
-		Emoji : "🇮🇹",
-		Name : "Italy"
+		emoji: "🇸🇽",
+		name: "Sint Maarten"
 	},
 	{
-		Emoji : "🇵🇾",
-		Name : "Paraguay"
+		emoji: "🇸🇰",
+		name: "Slovakia"
 	},
 	{
-		Emoji : "🇪🇸",
-		Name : "Spain"
+		emoji: "🇸🇮",
+		name: "Slovenia"
 	},
 	{
-		Emoji : "🇳🇷",
-		Name : "Nauru"
+		emoji: "🇸🇧",
+		name: "Solomon Islands"
 	},
 	{
-		Emoji : "🇬🇶",
-		Name : "Equatorial Guinea"
+		emoji: "🇸🇴",
+		name: "Somalia"
 	},
 	{
-		Emoji : "🇲🇳",
-		Name : "Mongolia"
+		emoji: "🇿🇦",
+		name: "South Africa"
 	},
 	{
-		Emoji : "🇵🇱",
-		Name : "Poland"
+		emoji: "🇬🇸",
+		name: "South Georgia & South Sandwich Islands"
 	},
 	{
-		Emoji : "🇸🇨",
-		Name : "Seychelles"
+		emoji: "🇰🇷",
+		name: "South Korea"
 	},
 	{
-		Emoji : "🇵🇬",
-		Name : "Papua New Guinea"
+		emoji: "🇸🇸",
+		name: "South Sudan"
 	},
 	{
-		Emoji : "🇦🇶",
-		Name : "Antarctica"
+		emoji: "🇪🇸",
+		name: "Spain"
 	},
 	{
-		Emoji : "🇧🇬",
-		Name : "Bulgaria"
+		emoji: "🇱🇰",
+		name: "Sri Lanka"
 	},
 	{
-		Emoji : "🇹🇨",
-		Name : "Turks & Caicos Islands"
+		emoji: "🇧🇱",
+		name: "St. Barthélemy"
 	},
 	{
-		Emoji : "🇻🇺",
-		Name : "Vanuatu"
+		emoji: "🇸🇭",
+		name: "St. Helena"
 	},
 	{
-		Emoji : "🇲🇵",
-		Name : "Northern Mariana Islands"
+		emoji: "🇰🇳",
+		name: "St. Kitts & Nevis"
 	},
 	{
-		Emoji : "🇧🇮",
-		Name : "Burundi"
+		emoji: "🇱🇨",
+		name: "St. Lucia"
 	},
 	{
-		Emoji : "🇦🇷",
-		Name : "Argentina"
+		emoji: "🇲🇫",
+		name: "St. Martin"
 	},
 	{
-		Emoji : "🇱🇹",
-		Name : "Lithuania"
+		emoji: "🇵🇲",
+		name: "St. Pierre & Miquelon"
 	},
 	{
-		Emoji : "🇦🇴",
-		Name : "Angola"
+		emoji: "🇻🇨",
+		name: "St. Vincent & Grenadines"
 	},
 	{
-		Emoji : "🇳🇵",
-		Name : "Nepal"
+		emoji: "🇸🇩",
+		name: "Sudan"
 	},
 	{
-		Emoji : "🇩🇰",
-		Name : "Denmark"
+		emoji: "🇸🇷",
+		name: "Suriname"
 	},
 	{
-		Emoji : "🇰🇾",
-		Name : "Cayman Islands"
+		emoji: "🇸🇯",
+		name: "Svalbard & JanMayen"
 	},
 	{
-		Emoji : "🇨🇩",
-		Name : "Congo-Kinshasa"
+		emoji: "🇸🇿",
+		name: "Swaziland"
 	},
 	{
-		Emoji : "🇪🇪",
-		Name : "Estonia"
+		emoji: "🇸🇪",
+		name: "Sweden"
 	},
 	{
-		Emoji : "🇨🇦",
-		Name : "Canada"
+		emoji: "🇨🇭",
+		name: "Switzerland"
 	},
 	{
-		Emoji : "🇲🇨",
-		Name : "Monaco"
+		emoji: "🇸🇾",
+		name: "Syria"
 	},
 	{
-		Emoji : "🇳🇿",
-		Name : "NewZealand"
+		emoji: "🇸🇹",
+		name: "SãoTomé & Príncipe"
 	},
 	{
-		Emoji : "🇰🇳",
-		Name : "St. Kitts & Nevis"
+		emoji: "🇹🇼",
+		name: "Taiwan"
 	},
 	{
-		Emoji : "🇩🇿",
-		Name : "Algeria"
+		emoji: "🇹🇯",
+		name: "Tajikistan"
 	},
 	{
-		Emoji : "🇼🇸",
-		Name : "Samoa"
+		emoji: "🇹🇿",
+		name: "Tanzania"
 	},
 	{
-		Emoji : "🇳🇨",
-		Name : "NewC aledonia"
+		emoji: "🇹🇭",
+		name: "Thailand"
 	},
 	{
-		Emoji : "🇬🇫",
-		Name : "French Guiana"
+		emoji: "🇹🇱",
+		name: "Timor-Leste"
 	},
 	{
-		Emoji : "🇵🇦",
-		Name : "Panama"
+		emoji: "🇹🇬",
+		name: "Togo"
 	},
 	{
-		Emoji : "🇧🇭",
-		Name : "Bahrain"
+		emoji: "🇹🇰",
+		name: "Tokelau"
 	},
 	{
-		Emoji : "🇵🇸",
-		Name : "Palestinian Territories"
+		emoji: "🇹🇴",
+		name: "Tonga"
 	},
 	{
-		Emoji : "🇭🇰",
-		Name : "Hong Kong"
+		emoji: "🇹🇹",
+		name: "Trinidad & Tobago"
 	},
 	{
-		Emoji : "🇸🇮",
-		Name : "Slovenia"
+		emoji: "🇹🇳",
+		name: "Tunisia"
 	},
 	{
-		Emoji : "🇱🇰",
-		Name : "Sri Lanka"
+		emoji: "🇹🇷",
+		name: "Turkey"
 	},
 	{
-		Emoji : "🇸🇸",
-		Name : "South Sudan"
+		emoji: "🇹🇲",
+		name: "Turkmenistan"
 	},
 	{
-		Emoji : "🇨🇨",
-		Name : "Cocos(Keeling) Islands"
+		emoji: "🇹🇨",
+		name: "Turks & Caicos Islands"
 	},
 	{
-		Emoji : "🇺🇸",
-		Name : "United States"
+		emoji: "🇹🇻",
+		name: "Tuvalu"
 	},
 	{
-		Emoji : "🇪🇨",
-		Name : "Ecuador"
+		emoji: "🇺🇲",
+		name: "U. S.  Outlying Islands"
 	},
 	{
-		Emoji : "🇸🇾",
-		Name : "Syria"
+		emoji: "🇻🇮",
+		name: "U. S.  Virgin Islands"
 	},
 	{
-		Emoji : "🇮🇷",
-		Name : "Iran"
+		emoji: "🇺🇬",
+		name: "Uganda"
 	},
 	{
-		Emoji : "🇧🇪",
-		Name : "Belgium"
+		emoji: "🇺🇦",
+		name: "Ukraine"
 	},
 	{
-		Emoji : "🇦🇬",
-		Name : "Antigua & Barbuda"
+		emoji: "🇦🇪",
+		name: "United Arab Emirates"
 	},
 	{
-		Emoji : "🇱🇸",
-		Name : "Lesotho"
+		emoji: "🇬🇧",
+		name: "United Kingdom"
 	},
 	{
-		Emoji : "🇲🇸",
-		Name : "Montserrat"
+		emoji: "🇺🇸",
+		name: "United States"
 	},
 	{
-		Emoji : "🇧🇸",
-		Name : "Bahamas"
+		emoji: "🇺🇾",
+		name: "Uruguay"
 	},
 	{
-		Emoji : "🇸🇽",
-		Name : "Sint Maarten"
+		emoji: "🇺🇿",
+		name: "Uzbekistan"
 	},
 	{
-		Emoji : "🇰🇲",
-		Name : "Comoros"
+		emoji: "🇻🇺",
+		name: "Vanuatu"
 	},
 	{
-		Emoji : "🇱🇦",
-		Name : "Laos"
+		emoji: "🇻🇦",
+		name: "Vatican City"
 	},
 	{
-		Emoji : "🇮🇩",
-		Name : "Indonesia"
+		emoji: "🇻🇪",
+		name: "Venezuela"
 	},
 	{
-		Emoji : "🇨🇴",
-		Name : "Colombia"
+		emoji: "🇻🇳",
+		name: "Vietnam"
 	},
 	{
-		Emoji : "🇲🇽",
-		Name : "Mexico"
+		emoji: "🇼🇫",
+		name: "Wallis & Futuna"
 	},
 	{
-		Emoji : "🇪🇹",
-		Name : "Ethiopia"
+		emoji: "🇪🇭",
+		name: "Western Sahara"
 	},
 	{
-		Emoji : "🇱🇨",
-		Name : "St. Lucia"
+		emoji: "🇾🇪",
+		name: "Yemen"
 	},
 	{
-		Emoji : "🇻🇮",
-		Name : "U. S.  Virgin Islands"
+		emoji: "🇿🇲",
+		name: "Zambia"
 	},
 	{
-		Emoji : "🇦🇸",
-		Name : "American Samoa"
+		emoji: "🇿🇼",
+		name: "Zimbabwe"
 	}
 ]
