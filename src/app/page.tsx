@@ -2,12 +2,10 @@
 import { Country, countries } from "@/data/countries";
 import { SyntheticEvent, useEffect, useState } from "react";
 import TextField from '@mui/material/TextField';
-import Autocomplete, { AutocompleteChangeDetails, AutocompleteChangeReason } from '@mui/material/Autocomplete';
+import Autocomplete, { AutocompleteChangeReason } from '@mui/material/Autocomplete';
+import { Button } from "@mui/material";
 
 type CorrectType = "Correct!" | "Incorrect!";
-const disabledButtonStyle = "hover:cursor-auto disabled opacity-40";
-const activeButtonStyle = "hover:opacity-70 hover:cursor-pointer";
-const buttonBaseStyle = "p-2 rounded border-2 border-black";
 
 export default function Home() {
   const [country, setCountry] = useState<Country>();
@@ -27,7 +25,7 @@ export default function Home() {
     event: SyntheticEvent<Element, Event>, 
     value: Country | null, 
     reason: AutocompleteChangeReason
-  ) {;
+  ) {
     if (value) setSelectedCountry(value);
   };
 
@@ -45,26 +43,9 @@ export default function Home() {
     setCountry(getRandomCountry());
   }
 
-  function getCheckButtonStyle(): string {
-    const base = buttonBaseStyle + " bg-green-400 ";
-    if (!selectedCountry || answered) {
-      return base + disabledButtonStyle;
-    } else {
-      return base + activeButtonStyle;
-    }
-  }
-
-  function getResetButtonStyle(): string {
-    const base = buttonBaseStyle + " bg-red-400 ";
-    if (!answered) {
-      return base + disabledButtonStyle;
-    } else {
-      return base + activeButtonStyle;
-    }
-  }
-
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
+      <div className="w-fit flex flex-col h-max items-center ">
         <p className="text-9xl m-4">{country?.emoji}</p>
 
         <Autocomplete
@@ -75,22 +56,26 @@ export default function Home() {
           renderInput={(params) => <TextField {...params} label="Countries" />}
           onChange={handleChange}
         />
-       
-        <button 
-          className={getCheckButtonStyle()} 
-          onClick={checkAnswer}>
-            Check
-        </button>
-        
+
+        <div className="w-full flex flex-col items-center p-2">
+          {!selectedCountry || answered ? 
+            <Button className=" bg-blue-500 w-full m-1 " disabled variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
+            :
+            <Button className=" bg-blue-500 w-full m-1 " variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
+          }
+          
+          
+          {!answered ?
+            <Button className=" bg-blue-500 w-full m-1 " disabled variant="contained" onClick={reset} disableElevation>Reset</Button>
+            :
+            <Button className=" bg-blue-500 w-full m-1 " variant="contained" onClick={reset} disableElevation>Reset</Button>
+          }
+        </div>
+
         <p className={"p-2 font-bold text-4xl " + (answered==="Correct!" ? "text-green-600" : "text-red-600")}>{answered}</p>
-        
         <p className={answered === "Incorrect!" ? "p-2" : "hidden"}>The answer was {country?.label}</p>
-        
-        <button 
-          className={getResetButtonStyle()} 
-          onClick={reset}>
-            Reset
-        </button>
+    
+      </div>
     </main>
   );
 }
