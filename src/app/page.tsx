@@ -1,6 +1,8 @@
 "use client";
 import { Country, countries } from "@/data/countries";
-import { useEffect, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
+import TextField from '@mui/material/TextField';
+import Autocomplete, { AutocompleteChangeDetails, AutocompleteChangeReason } from '@mui/material/Autocomplete';
 
 type CorrectType = "Correct!" | "Incorrect!";
 const disabledButtonStyle = "hover:cursor-auto disabled opacity-40";
@@ -21,10 +23,12 @@ export default function Home() {
     setCountry(getRandomCountry());
   }, []);
 
-  function handleChange(e: React.ChangeEvent<HTMLSelectElement>) {
-    const selection = e.target.value;
-    const selectionAsCountry = countries.find(c => c.name === selection);
-    setSelectedCountry(selectionAsCountry);
+  function handleChange(
+    event: SyntheticEvent<Element, Event>, 
+    value: Country | null, 
+    reason: AutocompleteChangeReason
+  ) {;
+    if (value) setSelectedCountry(value);
   };
 
   function checkAnswer() {
@@ -63,10 +67,14 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-24">
         <p className="text-9xl m-4">{country?.emoji}</p>
 
-        <select onChange={handleChange} className="m-4 p-2" name="countries" id="countries">
-            <option value="" selected={true}></option>
-            {countries.map(country => <option value={country.name}>{country.name}</option>)}
-        </select>
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={countries}
+          sx={{ width: 300 }}
+          renderInput={(params) => <TextField {...params} label="Countries" />}
+          onChange={handleChange}
+        />
        
         <button 
           className={getCheckButtonStyle()} 
@@ -76,7 +84,7 @@ export default function Home() {
         
         <p className={"p-2 font-bold text-4xl " + (answered==="Correct!" ? "text-green-600" : "text-red-600")}>{answered}</p>
         
-        <p className={answered === "Incorrect!" ? "p-2" : "hidden"}>The answer was {country?.name}</p>
+        <p className={answered === "Incorrect!" ? "p-2" : "hidden"}>The answer was {country?.label}</p>
         
         <button 
           className={getResetButtonStyle()} 
