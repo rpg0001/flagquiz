@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-  @apply bg-blue-600 flex flex-row justify-center w-full items-center
+  @apply bg-blue-600 flex flex-row justify-start w-full items-center
 }
 
 .navbar-link {
