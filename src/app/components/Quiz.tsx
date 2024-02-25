@@ -1,10 +1,11 @@
 "use client";
 import { Country, countries } from "@/data/countries";
-import { AutocompleteChangeReason, Autocomplete, TextField, Button } from "@mui/material";
+import { AutocompleteChangeReason, Autocomplete, TextField } from "@mui/material";
 import { useState, useEffect, SyntheticEvent } from "react";
 import Buttons from "./Buttons";
 import Flag from "./Flag";
 import ResultText from "./ResultText";
+import Loading from "./Loading";
 
 export type CorrectType = "Correct!" | "Incorrect!";
 
@@ -45,32 +46,30 @@ export default function Quiz(props: { countries: Country[] }) {
     }
   
     return (
-      <div className="w-fit flex flex-col h-max items-center p-12">
-      
-        <Flag emoji={country?.emoji} />
-    
+      <>
+      <div className="w-fit flex flex-col h-max items-center p-4">
+
+        {country ? <Flag emoji={country?.emoji} /> : <Loading />}
+
         <Autocomplete
           disablePortal
           id="combo-box-demo"
           options={countries}
           sx={{ width: 300 }}
           renderInput={(params) => <TextField {...params} label="Select country" />}
-          onChange={handleChange}
-        />
-    
-        <Buttons 
-          answered={answered} 
-          selectedCountry={selectedCountry} 
+          onChange={handleChange} />
+
+        <Buttons
+          answered={answered}
+          selectedCountry={selectedCountry}
           checkAnswer={checkAnswer}
-          reset={reset} 
-        />
-    
+          reset={reset} />
+
         <ResultText
           answered={answered}
-          countryLabel={country?.label}
-        />
-  
-      </div>
+          countryLabel={country?.label} />
+
+      </div></>
     )
   }
 

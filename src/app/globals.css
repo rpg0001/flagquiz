@@ -6,29 +6,36 @@ body {
   color: black;
 }
 
+.navbar {
+  @apply bg-blue-600 flex flex-row justify-center w-full items-center
+}
+
+.navbar-link {
+  @apply text-white hover:bg-blue-400 px-2 mx-2 py-4 h-full
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 
   h1 {
-    @apply text-3xl font-bold
+    @apply text-3xl font-bold m-4
   }
  
   h2 {
-    @apply text-2xl font-bold
+    @apply text-2xl font-bold m-2
   }
 
   h3 {
-    @apply text-xl font-bold
+    @apply text-xl font-bold m-2
   }
  
   h4 {
-    @apply text-lg font-bold
+    @apply text-lg font-bold m-2
   }
 }
 
 option {
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
-

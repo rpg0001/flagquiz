@@ -1,4 +1,4 @@
-  export default function Flag(props: { 
+export default function Flag(props: { 
     emoji: string | undefined
 }) {
     return (
