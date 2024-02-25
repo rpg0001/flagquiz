@@ -57,18 +57,18 @@ export default function Home() {
           onChange={handleChange}
         />
 
-        <div className="w-full flex flex-col items-center p-2">
+        <div className="w-full flex flex-col items-center p-2 gap-2">
           {!selectedCountry || answered ? 
-            <Button className=" bg-blue-500 w-full m-1 " disabled variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
+            <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
             :
-            <Button className=" bg-blue-500 w-full m-1 " variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
+            <Button className=" bg-blue-500 w-full " variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
           }
           
           
           {!answered ?
-            <Button className=" bg-blue-500 w-full m-1 " disabled variant="contained" onClick={reset} disableElevation>Reset</Button>
+            <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={reset} disableElevation>Reset</Button>
             :
-            <Button className=" bg-blue-500 w-full m-1 " variant="contained" onClick={reset} disableElevation>Reset</Button>
+            <Button className=" bg-blue-500 w-full " variant="contained" onClick={reset} disableElevation>Reset</Button>
           }
         </div>
 
