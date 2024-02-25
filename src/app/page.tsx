@@ -44,8 +44,9 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <div className="w-fit flex flex-col h-max items-center ">
+    <main className="flex h-screen flex-col items-center content-between p-8">
+      <h1>Flag Quiz</h1>
+      <div className="w-fit flex flex-col h-max items-center p-12">
         
         <Flag emoji={country?.emoji} />
 
