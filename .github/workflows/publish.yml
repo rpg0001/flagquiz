@@ -32,10 +32,13 @@ jobs:
       - name: Build with Next.js 🏗️
         run: npm run build
 
+      - name: Print working directory
+        run: ls
+
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: flagquiz/out/
 
   deploy:
     environment:
