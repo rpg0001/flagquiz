@@ -46,36 +46,73 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <div className="w-fit flex flex-col h-max items-center ">
-        <p className="text-9xl m-4">{country?.emoji}</p>
+        
+        <Flag emoji={country?.emoji} />
 
         <Autocomplete
           disablePortal
           id="combo-box-demo"
           options={countries}
           sx={{ width: 300 }}
-          renderInput={(params) => <TextField {...params} label="Countries" />}
+          renderInput={(params) => <TextField {...params} label="Select country" />}
           onChange={handleChange}
         />
 
-        <div className="w-full flex flex-col items-center p-2 gap-2">
-          {!selectedCountry || answered ? 
-            <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
-            :
-            <Button className=" bg-blue-500 w-full " variant="contained" onClick={checkAnswer} disableElevation>Check answer</Button>
-          }
-          
-          
-          {!answered ?
-            <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={reset} disableElevation>Reset</Button>
-            :
-            <Button className=" bg-blue-500 w-full " variant="contained" onClick={reset} disableElevation>Reset</Button>
-          }
-        </div>
+        <Buttons 
+          answered={answered} 
+          selectedCountry={selectedCountry} 
+          checkAnswer={checkAnswer}
+          reset={reset} 
+        />
 
-        <p className={"p-2 font-bold text-4xl " + (answered==="Correct!" ? "text-green-600" : "text-red-600")}>{answered}</p>
-        <p className={answered === "Incorrect!" ? "p-2" : "hidden"}>The answer was <b>{country?.label}</b></p>
-    
+        <ResultText
+          answered={answered}
+          countryLabel={country?.label}
+        />
+
       </div>
     </main>
   );
+}
+
+function Flag(props: { 
+  emoji: string | undefined
+}) {
+  return (
+    <p className="text-9xl m-4">{props.emoji}</p>
+  )
+}
+
+function Buttons(props: {
+  answered: CorrectType | null | undefined,
+  selectedCountry: Country | null | undefined,
+  checkAnswer: () => void,
+  reset: () => void
+}) {
+  return (
+    <div className="w-full flex flex-col items-center p-2 gap-2">
+      {!props.selectedCountry || props.answered ? 
+        <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={props.checkAnswer} disableElevation>Check answer</Button>
+        :
+        <Button className=" bg-blue-500 w-full " variant="contained" onClick={props.checkAnswer} disableElevation>Check answer</Button>
+      }
+      
+      
+      {!props.answered ?
+        <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={props.reset} disableElevation>Reset</Button>
+        :
+        <Button className=" bg-blue-500 w-full " variant="contained" onClick={props.reset} disableElevation>Reset</Button>
+      }
+    </div>
+  )
+}
+
+function ResultText(props: { 
+  countryLabel: string | undefined, 
+  answered: CorrectType | undefined | null
+}) {
+  return(<>
+    <p className={"p-2 font-bold text-4xl " + (props.answered === "Correct!" ? "text-green-600" : "text-red-600")}>{props.answered}</p>
+    <p className={props.answered === "Incorrect!" ? "p-2" : "hidden"}>The answer was <b>{props.countryLabel}</b></p>
+  </>)     
 }
