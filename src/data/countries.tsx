@@ -929,10 +929,6 @@ export const countries: Country[] = [
 		label: "Tuvalu"
 	},
 	{
-		emoji: "🇺🇲",
-		label: "U. S.  Outlying Islands"
-	},
-	{
 		emoji: "🇻🇮",
 		label: "U. S.  Virgin Islands"
 	},
