@@ -73,7 +73,7 @@ export default function Home() {
         </div>
 
         <p className={"p-2 font-bold text-4xl " + (answered==="Correct!" ? "text-green-600" : "text-red-600")}>{answered}</p>
-        <p className={answered === "Incorrect!" ? "p-2" : "hidden"}>The answer was {country?.label}</p>
+        <p className={answered === "Incorrect!" ? "p-2" : "hidden"}>The answer was <b>{country?.label}</b></p>
     
       </div>
     </main>
