@@ -7,7 +7,7 @@ export default function Buttons(props: {
     answered: CorrectType | null | undefined,
     selectedCountry: Country | null | undefined,
     checkAnswer: () => void,
-    reset: () => void
+    next: () => void
 }) {
     return (
         <div className="w-full flex flex-col items-center p-2 gap-2">
@@ -19,9 +19,9 @@ export default function Buttons(props: {
         
         
         {!props.answered ?
-            <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={props.reset} disableElevation>Reset</Button>
+            <Button className=" bg-blue-500 w-full " disabled variant="contained" onClick={props.next} disableElevation>Next</Button>
             :
-            <Button className=" bg-blue-500 w-full " variant="contained" onClick={props.reset} disableElevation>Reset</Button>
+            <Button className=" bg-blue-500 w-full " variant="contained" onClick={props.next} disableElevation>Next</Button>
         }
         </div>
     )

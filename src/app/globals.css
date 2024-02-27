@@ -11,7 +11,7 @@ body {
 }
 
 .navbar-link {
-  @apply text-white hover:bg-blue-400 px-2 mx-2 py-4 h-full
+  @apply text-white hover:bg-blue-500 px-2 mx-2 py-4 h-full
 }
 
 @layer utilities {
