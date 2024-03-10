@@ -3,7 +3,7 @@ export type Country = {
 	label: string
 }
 
-export const countries: Country[] = [
+export const countryData: Country[] = [
 	{
 		emoji: "🇦🇫",
 		label: "Afghanistan"

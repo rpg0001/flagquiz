@@ -1,5 +1,5 @@
 "use client";
-import { Country } from "@/data/countries";
+import { Country, countryData } from "@/data/countries";
 import { AutocompleteChangeReason, Autocomplete, TextField, Button, InputLabel, Select, MenuItem, SelectChangeEvent } from "@mui/material";
 import { useState, useEffect, SyntheticEvent } from "react";
 import Buttons from "./Buttons";
@@ -42,7 +42,8 @@ export default function SetupQuiz(props: { allCountries: Country[] }) {
   return (
     <>
       {!startedQuiz ? 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 my-4">
+          <h3>Game settings</h3>
           <InputLabel id="demo-simple-select-label">Number of questions</InputLabel>
           <Select
             labelId="demo-simple-select-label"
@@ -78,7 +79,10 @@ function Quiz(props: {
   const [country, setCountry] = useState<Country>();
   const [remainingCountries, setRemainingCountries] = useState<Country[]>(props.countries);
   const [selectedCountry, setSelectedCountry] = useState<Country | null>();
+
   const [answered, setAnswered] = useState<CorrectType | null>();
+  const [correct, setCorrect] = useState<number>(0);
+  const [incorrect, setIncorrect] = useState<number>(0);
 
   function getRandomCountry(): Country {
     const randomInteger = Math.floor(Math.random() * remainingCountries.length);
@@ -102,8 +106,10 @@ function Quiz(props: {
     setQuestionsAnswered(questionsAnswered + 1);
     if (country === selectedCountry) {
       setAnswered("Correct!");
+      setCorrect(correct + 1);
     } else {
       setAnswered("Incorrect!");
+      setIncorrect(incorrect + 1);
     }
   }
 
@@ -118,6 +124,7 @@ function Quiz(props: {
     <div className="w-fit flex flex-col h-max items-center p-4">
 
       <p>Answered: {questionsAnswered}  Total: {props.infinite ? "♾️" : props.countries.length}</p>
+      <p>Correct: {correct} Incorrect: {incorrect} </p>
 
 
       {country ? <Flag emoji={country?.emoji} /> : <Loading />}
@@ -125,7 +132,7 @@ function Quiz(props: {
       <Autocomplete
         disablePortal
         id="combo-box-demo"
-        options={props.countries}
+        options={countryData}
         sx={{ width: 300 }}
         renderInput={(params) => <TextField {...params} label="Select country" />}
         onChange={handleChange} />
